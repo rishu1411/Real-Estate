@@ -20,7 +20,7 @@ const HouseList = () => {
   return (
     <section className='mb-20'>
       <div className='container mx-auto'>
-        <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>
+        <div className='grid sm:grid-cols-2 lg:grid-cols-3 space-x-4'>
           {houses.map((house, index) => {
             return (
               <House house={house} key={index}/>
