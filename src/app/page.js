@@ -5,7 +5,7 @@ import React from 'react'
 
 function page() {
   return (
-    <div className='min-h-[1800px] mx-auto bg-white xl:mx-8 md:rounded-lg'>
+    <div className='min-h-[1850px] mx-auto bg-white xl:mx-8 md:rounded-lg'>
       <Banner />
       <HouseList/>
     </div>
