@@ -16,9 +16,9 @@ const HouseContextProvider = ({ children }) => {
   const [ properties,setProperties ] = useState([]);
   const [ price, setPrice ] = useState('Price range (any)')
   const [loading,setLoading] = useState(false)
-  const [ID, setID] = useState(1)
+  const [ID, setID] = useState(null)
   
-  let id = console.log(ID)
+
   
   useEffect(() => {
     const allCountries = houses.map((house) => {
@@ -92,6 +92,18 @@ const HouseContextProvider = ({ children }) => {
       sessionStorage.setItem('id',id)
     }, 300);
   }
+
+  useEffect(() => {
+    const id = window.sessionStorage.getItem('id')
+    if (id !== null) {
+      
+      setID(JSON.parse(id))
+    }
+  },[])
+
+  useEffect(() => {
+    window.sessionStorage.setItem('id',JSON.stringify(ID))
+  },[ID])
   const value = { country, setCountry, countries, property, setProperty, properties, price, setPrice, houses, loading,handleClick,ID,setID,handle}
   return <HouseContext.Provider value={value
    } >{children}</HouseContext.Provider>
