@@ -10,6 +10,7 @@ const House = ({ house }) => {
   return (
     
 
+    <div className='bg-white shadow-lg rounded-lg rounded-tl-[90px] mx-auto w-full max-w-[352px] p-5 border-[1.5px] border-gray-200  hover:shadow-xl hover:shadow-violet-200 '>
     <div className='bg-white shadow-lg rounded-lg rounded-tl-[90px]  p-5 border-[1.5px] border-gray-200 w-full max-w-[352px] hover:shadow-1 hover:shadow-violet-200 mx-auto'>
         <Image src={image} alt='House photo' className='mb-8' />
 
